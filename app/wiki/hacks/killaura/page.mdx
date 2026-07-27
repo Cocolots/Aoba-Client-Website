@@ -1,6 +1,6 @@
 export const metadata = {
   title: "KillAura Hack — Aoba Client for Minecraft",
-  description: "Automatically attacks nearby entities. KillAura is a Combat hack in Aoba Hacked Client for Minecraft Java Edition.",
+  description: "Automatically attacks nearby entities.",
 };
 
 # KillAura
@@ -10,9 +10,9 @@ Default Keybind: NONE
 Category: Combat
 ```
 
-KillAura automatically attacks the nearest player, monster, or animal within range, waiting for full attack
-cooldown to deal maximum damage. A "Legit" mode only swings when your crosshair is over the target
-for a more natural appearance.
+KillAura automatically attacks entities within range, waiting for full attack cooldown to deal maximum damage.
+Targets can be filtered by entity type and prioritized by distance or health, and a configurable rotation system
+can turn your view toward the target with easing and jitter for a more natural appearance.
 
 ## Detectable By
 - [ ] NoCheatPlus
@@ -28,14 +28,23 @@ for a more natural appearance.
 ## Settings
 | Name | Type | Description | Default |
 |------|------|-------------|---------|
+| Target Priority | Enum: Closest, LowestHealth, MostHealth | The priority used to pick which target to attack | Closest |
+| Attack Delay | Range | Random delay in milliseconds between attacks (min, max) (0 - 1000, Step: 10) | 50 - 150 |
 | Radius | Slider | The radius in blocks within which KillAura will target entities (0.1 - 10.0, Step: 0.1) | 5.0 |
-| Target Animals | Toggle | Whether KillAura will attack animal mobs | Off |
-| Target Monsters | Toggle | Whether KillAura will attack hostile mobs | On |
-| Target Players | Toggle | Whether KillAura will attack other players | On |
+| FOV | Slider | Angular cone in front of the player that targets must fall within (1.0 - 360.0, Step: 1.0) | 360.0 |
+| Body Part | Enum | The part of the target's body to aim at | Head |
+| Target Entities | Entity Selector | Entity types that KillAura will target | Player |
 | Target Friends | Toggle | Whether KillAura will attack players on your friends list | Off |
-| Legit | Toggle | When enabled, a raycast is used to ensure KillAura only attacks the target when it is directly in the player's line of sight, preventing hits on entities outside of view | Off |
-| Randomness | Slider | Introduces randomness into the delay between attacks to make the attack pattern less predictable. A value of 0 means no randomness (attack every tick) (0.0 - 60.0, Step: 1.0) | 0.0 |
+| Ignore Dead | Toggle | Skip entities that are dead or dying | On |
+| Ignore Invisible | Toggle | Skip entities that are invisible | On |
+| Ignore Sleeping | Toggle | Skip players that are sleeping | On |
+| Ignore NPCs | Toggle | Attempts to ignore NPCs based on the entity UUID | On |
+| Use Raycast | Toggle | Whether a raycast will be used to ensure that KillAura will not hit a player outside of the view | On |
+| Trigger On Click | Toggle | Only attack while the attack key is held down | Off |
 | Rotation Mode | Enum | Controls how the player's view rotates toward the target | NONE |
 | Max Rotation | Slider | The maximum rotation speed (in degrees) at which the player's view will turn toward the target per tick (1.0 - 360.0) | 10.0 |
+| Easing | Enum | Easing curve applied to the rotation speed as it approaches the target | SineEaseInOut |
 | Yaw Rotation Jitter | Slider | Adds randomness to the player's horizontal (yaw) rotation to simulate human-like aim inconsistency (0.0 - 10.0, Step: 0.1) | 0.0 |
 | Pitch Rotation Jitter | Slider | Adds randomness to the player's vertical (pitch) rotation to simulate human-like aim inconsistency (0.0 - 10.0, Step: 0.1) | 0.0 |
+| Fake Rotation | Toggle | Spoofs the client's rotation so that the player appears rotated on the server | Off |
+| Move Fix | Toggle | Corrects movement to match spoofed rotation by using the server yaw for velocity | Off |

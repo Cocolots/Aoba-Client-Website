@@ -1,6 +1,6 @@
 export const metadata = {
   title: "BedAura Hack — Aoba Client for Minecraft",
-  description: "Automatically breaks nearby beds. BedAura is a Combat hack in Aoba Hacked Client for Minecraft Java Edition.",
+  description: "Automatically breaks nearby beds.",
 };
 
 # BedAura
@@ -11,7 +11,8 @@ Category: Combat
 ```
 
 BedAura automatically finds and destroys nearby beds within a configurable radius, making it ideal for Bed Wars.
-The targeted bed is highlighted with a colored outline, and a "legit" mode is available to reduce the chance of anti-cheat detection.
+The targeted bed is highlighted with a colored outline, and a raycast mode is available to only break beds you are
+actually aiming at for a more natural appearance.
 
 ## Detectable By
 - [ ] NoCheatPlus
@@ -27,10 +28,12 @@ The targeted bed is highlighted with a colored outline, and a "legit" mode is av
 ## Settings
 | Name | Type | Description | Default |
 |------|------|-------------|---------|
-| Radius | Slider | The search radius around the player for detecting beds (0 - 15) | 5 |
-| Legit | Toggle | When enabled, uses a raycast to ensure the player is looking at the bed before breaking it, making the behavior appear more natural | Off |
+| Radius | Slider | The search radius around the player for detecting beds (0 - 15, Step: 1) | 5 |
+| Use Raycast | Toggle | Whether a raycast will be used to ensure that the player is aiming at the bed before breaking it | Off |
+| Trigger On Click | Toggle | Only break beds while the attack key is held down | Off |
 | Rotation Mode | Enum | Controls how the player's view rotates toward the target bed | NONE |
 | Max Rotation | Slider | The maximum speed at which the player's view will rotate toward the target bed (1 - 360) | 10 |
-| Yaw Rotation Jitter | Slider | Adds randomness to the player's horizontal (yaw) rotation for a more human-like appearance (0 - 10) | 0 |
-| Pitch Rotation Jitter | Slider | Adds randomness to the player's vertical (pitch) rotation for a more human-like appearance (0 - 10) | 0 |
-| Color | Color | The color of the 3D box rendered around the targeted bed block | Cyan (0, 1, 1) |
+| Easing | Enum | Easing curve applied to the rotation speed as it approaches the target | SineEaseInOut |
+| Yaw Rotation Jitter | Slider | Adds randomness to the player's horizontal (yaw) rotation for a more human-like appearance (0 - 10, Step: 0.1) | 0 |
+| Pitch Rotation Jitter | Slider | Adds randomness to the player's vertical (pitch) rotation for a more human-like appearance (0 - 10, Step: 0.1) | 0 |
+| Color | Color | The color of the 3D box rendered around the targeted bed block | Cyan (0, 255, 255) |

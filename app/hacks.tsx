@@ -10,6 +10,7 @@ export type Hack = {
 
 export const Hacks : Hack[] = [
     {name:"Aimbot", category:"Combat", description: "Automatically aims at nearby entities."},
+    {name:"AirPlace", category:"World", description: "Places a block at your crosshair, including floating in the air."},
     {name:"AntiCactus", category:"Misc", description: "Prevents damage from cacti."},
     {name:"AntiHunger", category:"Misc", description: "Reduces hunger depletion rate."},
     {name:"AntiInvis", category:"Combat", description: "Reveals invisible players and entities."},
@@ -25,6 +26,7 @@ export const Hacks : Hack[] = [
     {name:"AutoShear", category:"Misc", description: "Automatically shears nearby sheep."},
     {name:"AutoSign", category:"World", description: "Automatically writes text on placed signs."},
     {name:"AutoSoup", category:"Combat", description: "Automatically consumes soup for health regeneration."},
+    {name:"AutoTool", category:"World", description: "Automatically switches to the right tool when mining."},
     {name:"AutoTotem", category:"Combat", description: "Automatically equips totems of undying."},
     {name:"AutoWalk", category:"Misc", description: "Automatically walks in a specified direction."},
     {name:"BedAura", category:"Combat", description: "Automatically breaks nearby beds."},
@@ -65,7 +67,6 @@ export const Hacks : Hack[] = [
     {name:"NoRender", category:"Render", description: "Disables rendering of specific game elements."},
     {name:"NoSlowdown", category:"Movement", description: "Prevents slowdown from soul sand, items, etc."},
     {name:"Nuker", category:"World", description: "Breaks multiple blocks simultaneously."},
-    {name:"PlayerESP", category:"Render", description: "Highlights players through walls."},
     {name:"POV", category:"Render", description: "View another player or mob's point of view."},
     {name:"RandomPlace", category:"Misc", description: "Places blocks in random positions."},
     {name:"Reach", category:"Combat", description: "Increases reach distance for blocks and entities."},

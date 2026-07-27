@@ -1,0 +1,34 @@
+export const metadata = {
+  title: "AirPlace Hack — Aoba Client for Minecraft",
+  description: "Places a block at your crosshair, including floating in the air.",
+};
+
+# AirPlace
+
+```
+Default Keybind: NONE
+Category: World
+```
+
+AirPlace lets you place blocks in mid-air at your crosshair, without needing an adjacent block to build against.
+A colored preview box shows where the block will be placed, and holding the use key places it. Spawn eggs can
+also be used in the air, with separate toggles for allowing blocks and spawn eggs.
+
+## Detectable By
+- [ ] NoCheatPlus
+- [ ] Vulcan
+- [ ] AdvancedAntiCheat
+- [ ] Verus
+- [ ] Grim
+- [ ] Matrix
+- [ ] Negativity
+- [ ] Karhu
+- [ ] Buzz
+
+## Settings
+| Name | Type | Description | Default |
+|------|------|-------------|---------|
+| Radius | Float | Distance in front of the player to place a floating block. Min: 0.0, Max: 15.0, Step: 1.0 | 5.0 |
+| Allow Blocks? | Boolean | Whether to allow placing of blocks | true |
+| Allow Spawn Eggs? | Boolean | Whether to allow placing of spawn eggs in the air | true |
+| Color | Color | The color of the placement preview box | cyan (0, 255, 255) with 65% opacity |

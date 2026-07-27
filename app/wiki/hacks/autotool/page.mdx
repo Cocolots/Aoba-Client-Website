@@ -1,0 +1,33 @@
+export const metadata = {
+  title: "AutoTool Hack — Aoba Client for Minecraft",
+  description: "Automatically switches to the right tool when mining.",
+};
+
+# AutoTool
+
+```
+Default Keybind: NONE
+Category: World
+```
+
+AutoTool automatically switches your hotbar to the fastest tool for the block you are mining.
+It can swap back to your previous slot when you are done, and can automatically disable itself
+when combat modules such as KillAura or AutoCrystal are enabled so it does not interfere with fighting.
+
+## Detectable By
+- [ ] NoCheatPlus
+- [ ] Vulcan
+- [ ] AdvancedAntiCheat
+- [ ] Verus
+- [ ] Grim
+- [ ] Matrix
+- [ ] Negativity
+- [ ] Karhu
+- [ ] Buzz
+
+## Settings
+| Name | Type | Description | Default |
+|------|------|-------------|---------|
+| Auto Toggle | Boolean | Automatically toggles off if any critical combat module has been enabled | true |
+| Swap Back | Boolean | Switches back to previous slot when done | true |
+| Mining Only | Boolean | Changes the tool only when starting to mine | true |
