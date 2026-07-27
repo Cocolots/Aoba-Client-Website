@@ -37,11 +37,7 @@ export default function Page() {
             <script type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             <TitleBar />
-
-            <div className="w-1/2 ml-auto mr-auto mt-10">
-                <DisplayAd  />
-            </div>
-                       
+     
             <div className="flex-grow flex items-center justify-center px-4 py-10">
                 <div className="w-full max-w-[600px] text-center bg-background border border-zinc-700 rounded-xl p-8 sm:p-12">
                     <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-aoba-purple to-aoba-purple-dark pb-2">No addons here yet!</h1>
@@ -52,6 +48,10 @@ export default function Page() {
                         Join the Discord
                     </a>
                 </div>
+            </div>
+
+            <div className="w-1/2 ml-auto mr-auto mt-10">
+                <DisplayAd  />
             </div>
         </main>
     )
