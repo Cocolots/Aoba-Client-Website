@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { MC_VERSION, SITE_NAME, SITE_URL } from "@/lib/constants";
-import { Analytics } from '@vercel/analytics/next';
+import { GA_MEASUREMENT_ID, MC_VERSION, SITE_NAME, SITE_URL } from "@/lib/constants";
+import CookieConsent from "@/components/CookieConsent/CookieConsent";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -52,7 +52,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
       </head>
       <body className="bg-background">
 		{children}
-		<Analytics />
+		<CookieConsent measurementId={GA_MEASUREMENT_ID} />
 		</body>
       <Script id="nextjs-google-adsense"
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${publisherId}`}
