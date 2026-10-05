@@ -47,24 +47,24 @@ gtag('config', '${measurementId}');`}
                     role="dialog"
                     aria-live="polite"
                     aria-label="Cookie consent"
-                    className="fixed bottom-0 inset-x-0 z-50 bg-background-accent border-t border-border-purple px-4 py-4"
+                    className="fixed bottom-0 inset-x-0 z-50 bg-background-accent border-t border-border-purple px-4 py-6"
                 >
-                    <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4">
-                        <p className="text-sm flex-1">
-                            We use Google Analytics cookies to understand how visitors use this site. You can accept or decline analytics tracking.
+                    <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-6">
+                        <p className="text-base flex-1">
+                            We use analytics cookies to understand how users navigate the site. You can accept or decline these cookies at your own will.
                         </p>
                         <div className="flex gap-3 shrink-0">
                             <button
                                 type="button"
                                 onClick={() => choose("declined")}
-                                className="px-4 py-2 rounded border border-aoba-purple text-sm hover:bg-aoba-purple-0.2"
+                                className="px-5 py-2.5 rounded border border-aoba-purple text-base hover:bg-aoba-purple-0.2"
                             >
                                 Decline
                             </button>
                             <button
                                 type="button"
                                 onClick={() => choose("accepted")}
-                                className="px-4 py-2 rounded bg-aoba-purple-dark text-sm hover:bg-aoba-purple hover:text-background"
+                                className="px-5 py-2.5 rounded bg-aoba-purple-dark text-base hover:bg-aoba-purple hover:text-background"
                             >
                                 Accept
                             </button>
