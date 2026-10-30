@@ -34,15 +34,19 @@ export const ContributorWidget = async () => {
 
     return (
         <div className="flex flex-wrap justify-center mx-auto">
-            {githubData.map((contributor: GithubAvatar) => (
+            {githubData.map((contributor: GithubAvatar) => {
+                const avatarUrl = new URL(contributor.avatar_url);
+                avatarUrl.searchParams.set("s", "250");
+                return (
                 <div key={contributor.login} className="border border-zinc-500 bg-zinc-800 rounded-lg px-10 py-5 m-2 text-center">
                     <Link prefetch={false} href={contributor.html_url}>
                         <Image
                             className="mt-2 mb-2 m-auto rounded-full"
-                            src={contributor.avatar_url}
+                            src={avatarUrl.toString()}
                             alt={contributor.login}
                             width={125}
                             height={125}
+                            unoptimized
                         />
                     </Link>
                     <h2 className={`border-b border-zinc-500 ${contributor.login === "Cocolots" ? "text-yellow-500" : "text-white"}`}>
@@ -52,7 +56,8 @@ export const ContributorWidget = async () => {
                         {contributor.contributions} {contributor.contributions > 1 ? "contributions" : "contribution"}
                     </p>
                 </div>
-            ))}
+                );
+            })}
         </div>
     );
 };
