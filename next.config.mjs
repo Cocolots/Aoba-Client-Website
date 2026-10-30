@@ -12,6 +12,16 @@ const nextConfig = {
         hostname: "avatars.githubusercontent.com"
       }
     ]
+  },
+  async headers() {
+    return [
+      {
+        source: '/:all*(svg|png|ico|gif|jpg|jpeg|webp)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+    ]
   }
 }
 
