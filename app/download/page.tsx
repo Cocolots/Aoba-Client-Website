@@ -198,7 +198,7 @@ export default function Page() {
 
                 <InformationPane className="my-5">
                     <h2 className="text-aoba-purple">📥 Installation Instructions</h2>
-                    <p>Installation instructions can be found on the <Link prefetch={false} href="/wiki/">Wiki</Link></p>
+                    <p>Installation instructions can be found on the <Link prefetch={false} href="/wiki">Wiki</Link></p>
                 </InformationPane>
 
                 <Releases />
